@@ -25,6 +25,9 @@
         'sources': [
           'src/unix/pty.cc'
         ],
+        'cflags': [
+          '-fPIC'
+        ],
         'libraries': [
           '-lutil'
         ],
@@ -35,11 +38,6 @@
       ['OS=="mac" or OS=="solaris"', {
         'libraries!': [
           '-lutil'
-        ]
-      }],
-      ['OS=="linux"', {
-        'cflags': [
-          '-fPIC'
         ]
       }],
     ]
